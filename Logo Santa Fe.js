@@ -35,7 +35,7 @@ function changeLgColor(){
 function draw() {
   background (bgcolor);
   fill("white")
-  rect(125, 50, 180, 250, 0, 0, 40, 40);
+  rect(125, 50, 180, 250, 0, 0, 70, 70);
   console.log(frameRate());
   
   fill(lgcolor)
