@@ -1,0 +1,27 @@
+let fib = [];
+let n = 10; 
+let squareSize = 40;
+
+function setup() {
+  createCanvas(400, 400);
+  calculateFibonacci(n);
+}
+
+function draw() {
+  background(220);
+  noFill();
+  stroke(0);
+  for (let i = 0; i < fib.length; i++) {
+    rect(10, 10, squareSize * fib[i], squareSize * fib[i]);
+    translate(squareSize * fib[i], 0);
+  }
+}
+
+function calculateFibonacci(n) {
+  fib = [];
+  fib[0] = 0;
+  fib[1] = 1;
+  for (let i = 2; i < n; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+  }
+}
